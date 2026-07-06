@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2
+
+### Patch Changes
+
+- [`01bc85a`](https://github.com/vnphanquang/remark-codeblock-source/commit/01bc85a1bd3ed6ffa5a7a9b2a49e60c0dda40dd8) Thanks [@vnphanquang](https://github.com/vnphanquang)! - drop `unist-builder` dependency
+
 ## 1.0.1
 
 ### Patch Changes
