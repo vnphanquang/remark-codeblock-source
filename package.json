@@ -1,6 +1,6 @@
 {
 	"name": "remark-codeblock-source",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "load codeblock content from external source (e.g. filesytem, GitHub, etc.)",
 	"license": "MIT",
 	"author": {
