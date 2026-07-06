@@ -194,8 +194,8 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 
 ## More `unified` Plugins by Me
 
-- [remark-transform-blockquote](github.com/vnphanquang/remark-transform-blockquote)
-- [remark-enhance-codeblock](github.com/vnphanquang/remark-enhance-codeblock)
+- [remark-transform-blockquote](https://github.com/vnphanquang/remark-transform-blockquote)
+- [remark-enhance-codeblock](https://github.com/vnphanquang/remark-enhance-codeblock)
 
 ---
 
