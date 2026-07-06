@@ -3,6 +3,7 @@ import rehypeStringify from 'rehype-stringify';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
+import type { VFile } from 'vfile';
 import { expect } from 'vitest';
 
 import { remarkCodeblockSource } from '../src/plugin';
@@ -18,7 +19,10 @@ export function matchStringIgnoringWhitespace(actual: string, expected: string) 
 	expect(normalize(actual)).toBe(normalize(expected));
 }
 
-export async function processWithPlugin(input: string, options?: RemarkCodeblockSourceOptions) {
+export async function processWithPlugin(
+	input: string | VFile,
+	options?: RemarkCodeblockSourceOptions,
+) {
 	const output = await unified()
 		.use(remarkParse)
 		.use(remarkCodeblockSource, options)

@@ -20,6 +20,7 @@ const jsdocConfig = [
 					},
 				},
 			],
+			'jsdoc/tag-lines': 'off',
 		},
 	}),
 ];
