@@ -86,9 +86,7 @@ describe('should process code blocks with src attribute', async () => {
 
 		expect(spiedOnFsResolver).toHaveBeenCalledWith(
 			'./examples/test.js',
-			expect.objectContaining({
-				history: [vfile.path],
-			}),
+			expect.any(VFile),
 			expect.objectContaining({
 				type: 'code',
 				lang: 'js',

@@ -8,7 +8,7 @@ const cache = {};
 export function fs(options = {}) {
 	return async function (path, vfile) {
 		const { readFile } = await import('node:fs/promises');
-		const { resolve, join, isAbsolute } = await import('node:path');
+		const { resolve, join, isAbsolute } = await import('node:path/posix');
 
 		let rPath = path;
 		if (isAbsolute(path)) {
