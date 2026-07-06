@@ -133,10 +133,11 @@ unified.use(remarkCodeblockSource, {
 
 Path should be in the format of `github:account/:repo/:commit_or_branch/:filepath`:
 
-`````markdown
+````markdown
 ```markdown src="github:account/:repo/:commit_or_branch/:filepath"
 
 ```
+````
 
 ### Custom Resolver
 
@@ -182,7 +183,6 @@ unified.use(remarkCodeblockSource, {
 
 ```
 ````
-`````
 
 ## Related Projects / Prior Arts
 
@@ -200,7 +200,3 @@ unified.use(remarkCodeblockSource, {
 [npm]: https://www.npmjs.com/package/remark-codeblock-source
 [codecov]: https://codecov.io/github/vnphanquang/remark-codeblock-source
 [codecov.badge]: https://codecov.io/github/vnphanquang/remark-codeblock-source/graph/badge.svg?token=dKkYUy4evr
-
-```
-
-```
