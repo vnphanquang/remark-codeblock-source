@@ -192,6 +192,10 @@ unified.use(remarkCodeblockSource, {
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 
+## More `unified` Plugins by Me
+
+- [remark-transform-blockquote](github.com/vnphanquang/remark-transform-blockquote)
+
 ---
 
 [built by me, not agents](https://gist.github.com/vnphanquang/018ee2b2080c9dc9890327f3d233998b).
