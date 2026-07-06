@@ -188,6 +188,10 @@ unified.use(remarkCodeblockSource, {
 
 - [kevin940726/remark-code-import](https://github.com/kevin940726/remark-code-import)
 
+## CONTRIBUTING
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
+
 ---
 
 [built by me, not agents](https://gist.github.com/vnphanquang/018ee2b2080c9dc9890327f3d233998b).
