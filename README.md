@@ -60,7 +60,7 @@ will transform the following input...
 The `src` attribute takes the following format:
 
 ````markdown
-```language src=<namespace>[|insert]=<path>
+```language src=<namespace>[|insert]:<path>
 
 ```
 ````
