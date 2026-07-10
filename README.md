@@ -119,6 +119,16 @@ unified.process(vfile);
 
 ...otherwise the resolved path will fall back to being relative to cwd.
 
+Turn on `cache` to cache the read content in memory, so that subsequent requests for the same path will not trigger another read:
+
+```typescript
+unified.use(remarkCodeblockSource, {
+	resolvers: { fs: fs({ cache: true }) },
+});
+```
+
+Use with caution, however, as this may lead to increased memory usage.
+
 ### Builtin Resolver: `github`
 
 Fetch content from Github via `raw.githubusercontent.com`.
@@ -138,6 +148,16 @@ Path should be in the format of `github:account/:repo/:commit_or_branch/:filepat
 
 ```
 ````
+
+Turn on `cache` to cache the fetched content in memory, so that subsequent requests for the same path will not trigger another fetch:
+
+```typescript
+unified.use(remarkCodeblockSource, {
+	resolvers: { github: github({ cache: true }) },
+});
+```
+
+Use with caution, however, as this may lead to increased memory usage.
 
 ### Custom Resolver
 
