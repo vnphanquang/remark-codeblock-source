@@ -64,6 +64,13 @@ describe('return namespace & path', () => {
 			path: 'path to source',
 		});
 	});
+
+	test('allow # prefix', () => {
+		expect(parseSrcFromMeta('language #src="namespace:path/to/source"')).toEqual({
+			namespace: 'namespace',
+			path: 'path/to/source',
+		});
+	})
 });
 
 describe('return insert, if any', () => {
