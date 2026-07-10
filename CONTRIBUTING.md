@@ -57,7 +57,7 @@ We follow the [Conventional Commits][conventionalcommits] guidelines for writing
 
 ### Code Style Enforcement
 
-The project uses [Deno] builtin support for code linting and formatting. Make sure to install necessary plugins or integrations in your code editor.
+This project uses [eslint] & [prettier] for code linting and formatting. Make sure to install necessary plugins or integrations in your code editor.
 
 [lefthook] is setup to run format and lint checks as a `pre-commit` [git hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks).
 To bypass hook (not recommended, for admin only), run `git commit` with the `--no-verify` flag.
@@ -70,5 +70,7 @@ To bypass hook (not recommended, for admin only), run `git commit` with the `--n
 [lefthook]: https://lefthook.dev/
 [node]: https://nodejs.org/en/
 [pnpm]: https://pnpm.io/
+[eslint]: https://eslint.org/
+[prettier]: https://prettier.io/
 [lefthook.yml]: ./lefthook.yml
 [package.json]: ./package.json
