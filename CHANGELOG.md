@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.3
+
+### Patch Changes
+
+- [`5dc92bf`](https://github.com/vnphanquang/remark-codeblock-source/commit/5dc92bfdef6439939e9f2a24ad9d0a64834d0b1d) Thanks [@vnphanquang](https://github.com/vnphanquang)! - allow `#` prefix for `src`, to be compatible with `remark-enhance-codeblock`
+
+- [`628c0e7`](https://github.com/vnphanquang/remark-codeblock-source/commit/628c0e7197dbdec08a4e3b89d49e552b3d980541) Thanks [@vnphanquang](https://github.com/vnphanquang)! - do not match src if part of another attribute, e.g. `language othersrc=...`
+
 ## 1.0.2
 
 ### Patch Changes
