@@ -9,7 +9,7 @@
 export function parseSrcFromMeta(meta) {
 	if (!meta?.includes('src')) return null;
 	const matches = Array.from(
-		meta.matchAll(/src\|?((?:append|prepend|replace)?)=(?:"([^"]+):([^"]+)"|([^\s"]+):([^\s"]+))/g),
+		meta.matchAll(/(?:^|\s)src\|?((?:append|prepend|replace)?)=(?:"([^"]+):([^"]+)"|([^\s"]+):([^\s"]+))/g),
 	);
 	const match = matches[matches.length - 1];
 	if (!match) return null;

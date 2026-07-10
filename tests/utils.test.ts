@@ -36,6 +36,10 @@ test('return null if path only contains whitespace', () => {
 	expect(parseSrcFromMeta('language src="namespace:   "')).toBeNull();
 });
 
+test('return null if "src" is part of another attribute name', () => {
+	expect(parseSrcFromMeta('language othersrc="namespace:path/to/source"')).toBeNull();
+});
+
 describe('return namespace & path', () => {
 	test('without quotes', () => {
 		expect(parseSrcFromMeta('language src=namespace:path/to/source')).toEqual({
