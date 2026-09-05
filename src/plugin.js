@@ -3,9 +3,9 @@ import { CONTINUE, SKIP, visit } from 'unist-util-visit';
 import { parseSrcFromMeta } from './utils.js';
 
 /**
+ * @type {import('unified').Plugin<[import('./types.public').RemarkCodeblockSourceOptions?], import('mdast').Root>}
+ *
  * load external source into code blocks based on the `src` attribute in the meta string.
- * @param {import('./types.public').RemarkCodeblockSourceOptions} [options] - configure the plugin behavior
- * @returns {import('unified').Transformer<import('mdast').Root, import('mdast').Root>}
  *
  * @example This following setup:
  *
@@ -40,8 +40,8 @@ export function remarkCodeblockSource(options) {
 
 	if (!['append', 'prepend', 'replace'].includes(insert)) {
 		throw new Error(
-			`[remark-codeblock-source] Invalid insert option: ${insert}. Must be one of 'append', 'prepend', or 'replace'.`
-		)
+			`[remark-codeblock-source] Invalid insert option: ${insert}. Must be one of 'append', 'prepend', or 'replace'.`,
+		);
 	}
 
 	return async function (tree, vfile) {
