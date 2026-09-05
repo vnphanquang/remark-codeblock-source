@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.4
+
+### Patch Changes
+
+- [`0e556d4`](https://github.com/vnphanquang/remark-codeblock-source/commit/0e556d4140aede1f34745c98dfd861f4a5f759c3) Thanks [@vnphanquang](https://github.com/vnphanquang)! - conform to unified Plugin typing for better typescript support
+
 ## 1.0.3
 
 ### Patch Changes
