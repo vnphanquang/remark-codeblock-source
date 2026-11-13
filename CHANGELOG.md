@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+### Minor Changes
+
+- [`4bfc430`](https://github.com/vnphanquang/remark-codeblock-source/commit/4bfc4301e4f75b525731a84891fba369ac1d8a8a) Thanks [@vnphanquang](https://github.com/vnphanquang)! - support slicing source content with line number specs when using the `fs` resolver
+
 ## 1.0.4
 
 ### Patch Changes
