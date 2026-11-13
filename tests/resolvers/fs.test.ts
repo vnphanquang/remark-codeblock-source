@@ -3,6 +3,7 @@ import { VFile } from 'vfile';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 
 import { fs } from '../../src/resolvers/fs.js';
+import { html } from '../test-utils.js';
 
 // tell vitest to use fs mock from __mocks__ folder
 vi.mock('node:fs');
@@ -63,6 +64,40 @@ describe('should return file content from fs, scoped within cwd', () => {
 	});
 });
 
+describe('should slice content if given line numbers', () => {
+	beforeEach(() => {
+		vol.fromJSON({
+			'/project/examples/index.html': html`
+			<header>Header</header>
+			<main>
+				<h1>Page Title</h1>
+			</main>
+			`,
+		});
+	});
+	const filepath = './examples/index.html';
+	const vfile = new VFile({
+		path: '/project/index.md',
+		cwd: '/project',
+	});
+
+	test('oneliner', async () => {
+		const src = filepath + '#L1';
+		const output = await fs()(src, vfile);
+		expect(output).toBe(html`<header>Header</header>`);
+	});
+
+	test('range', async () => {
+		const src = filepath + '#L2-L4';
+		const output = await fs()(src, vfile);
+		expect(output).toBe(html`
+			<main>
+				<h1>Page Title</h1>
+			</main>
+		`);
+	});
+});
+
 test('cache should take effect if turned on', async () => {
 	vol.fromJSON({ '/project/examples/test.ts': SOURCE });
 
@@ -74,3 +109,4 @@ test('cache should take effect if turned on', async () => {
 
 	expect(spiedOnReadFile).toHaveBeenCalledTimes(1);
 });
+
